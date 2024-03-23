@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-content {
+    width: 80vw;
+    margin: auto;
+}
+
+.nav-right span {
+    margin: 15px;
+}
+
+span {
+    font-size: 20px;
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+}
