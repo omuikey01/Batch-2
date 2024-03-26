@@ -3,5 +3,5 @@ from .views import *
 
 urlpatterns = [
     path("", mainpage),
-    # path("about/", about)
+    path("py/", html_python, name="html-python")
 ]

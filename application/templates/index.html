@@ -12,20 +12,18 @@
 </head>
 <body>
 
-   {% include "nav.html" %}
-
-    <h1> Hemhesh Madan </h1>
-
-    {% include "features.html" %}
-
-   
-    <p id="demo" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam numquam iusto ducimus, praesentium id corporis nostrum laudantium in nobis labore.</p>
     
+    <h1> Welcome to Landing Page </h1>
     
-    <button onclick="incress()" > Font Incress </button>
+    <h3> {{Django}} </h1>
 
+    <h3> {{O12}} </h3>
 
-    <script src="{% static 'js/main.js' %}"></script>
+    <form action="{% url 'html-python' %}" method="get">
+
+        <button name="J90" value="Django Class data from html to Python" > Submit </button>
+    
+    </form>
 
 </body>
 </html>
