@@ -15,6 +15,7 @@
     
     <h1> Welcome to Landing Page </h1>
     
+    {% comment %} 
     <h3> {{Django}} </h1>
 
     <h3> {{O12}} </h3>
@@ -24,6 +25,50 @@
         <button name="J90" value="Django Class data from html to Python" > Submit </button>
     
     </form>
+
+    <form action="{% url 'save_data_cokkies' %}" method="get">
+
+        <h1> Data for Cookies </h1>
+
+        <input type="text" placeholder="name" name="n1" >
+        <input type="text" placeholder="email" name="e1">
+        <input type="text" placeholder="password" name="p1">
+
+        <button> Save Data </button>
+
+    </form>
+
+    <form action="{% url 'get_data' %}" method="get">
+
+        
+        <button> Get Cookies Data </button>
+    </form>
+
+ {% endcomment %}
+
+
+
+    <form action="{% url 'save_data_session' %}" method="get">
+
+        <h1> Data for Session </h1>
+
+        <input type="text" placeholder="name" name="n2" >
+        <input type="text" placeholder="email" name="e2">
+        <input type="text" placeholder="password" name="p2">
+
+        <button> Save Data from Session </button>
+
+    </form>
+
+
+    
+    <form action="{% url 'get_data_session' %}" method="get">
+
+        
+        <button> Get Session Data </button>
+        
+    </form>
+  
 
 </body>
 </html>

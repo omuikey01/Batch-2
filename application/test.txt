@@ -1,0 +1,46 @@
+  <form action="{% url 'save_data_session' %}" method="get">
+
+        <h1> Data for Session </h1>
+
+        <input type="text" placeholder="name" name="n2" >
+        <input type="text" placeholder="email" name="e2">
+        <input type="text" placeholder="password" name="p2">
+
+        <button> Save Data </button>
+
+    </form>
+
+
+    <form action="{% url 'get_data_session' %}" method="get">
+
+        
+        <button> Get Session Data </button>
+        
+    </form>
+
+
+
+
+
+    path("save_data_session/", sessionFun, name="save_data_session"),
+    path("get_data_session/", getsessionFun, name="get_data_session"),
+
+
+
+def sessionFun(request):
+    name1 = request.GET['n2']
+    email1 = request.GET['e2']
+    pass1 = request.GET['p2']
+ 
+
+    request.session['ur_name'] = name1
+    request.session['ur_email'] = email1
+    request.session['ur_pass'] = pass1
+
+    return HttpResponse("<h1> Data save in Sessions </h1>")
+
+def getsessionFun(come) :
+    my_name = come.session.get("ur_name")
+    print("*****************************")
+    print(my_name)
+    print("*****************************")
